@@ -14,6 +14,7 @@ export class CommentsComponent implements OnInit {
   comment1 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in cursus leo, a gravida mi. Duis id tellus risus. Aliquam id convallis magna. Nam egestas mauris non neque dapibus, quis congue enim mollis. ';
   comment2 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in cursus leo';
   comment3 = 'Lorem ipsum dolor sit amet, consectetur';
+  comment4 = '';
 
   date: moment.Moment;
 
