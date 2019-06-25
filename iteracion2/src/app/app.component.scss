@@ -1,0 +1,23 @@
+div{
+  width: 100%;
+  //max-width: 80rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  h1{
+    font-weight:lighter;
+    margin: 0;
+  }
+  figure{
+    overflow: hidden;
+    margin: 0 auto;
+    img{
+      width: 100%;
+    }
+    figcaption{
+      text-align: justify;
+      //font-size: small;
+    }
+  }
+}
+app-comments{
+  padding: 1rem;
+}
