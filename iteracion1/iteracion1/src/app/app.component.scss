@@ -1,0 +1,31 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  background: black;
+  height:8rem;
+  color:wheat;
+
+
+}
+
+h1{
+  margin-left:2rem;
+
+}
+
+.album{
+  background: violet;
+  margin-top: 4rem;
+  display:flex;
+  flex-direction: row;
+   justify-content: space-around;
+}
+
+figcaption{
+  color:white;
+}
