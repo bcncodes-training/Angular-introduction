@@ -1,0 +1,9 @@
+<div>
+  <div *ngFor="let comment of comments">
+    <p>
+      <strong>{{ comment.author }}</strong
+      >{{ comment.date }}
+    </p>
+    <p>{{ comment.content }}</p>
+  </div>
+</div>
