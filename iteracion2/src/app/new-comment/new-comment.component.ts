@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-new-comment',
@@ -7,11 +8,15 @@ import { Input } from '@angular/core';
   styleUrls: ['./new-comment.component.scss']
 })
 export class NewCommentComponent implements OnInit {
-  title='Add your comment';
-  name='Name:';
-  msg='Description:';
-  submit='Submit';
-  constructor() { }
+  title = 'Add your comment';
+  name = 'Name:';
+  msg = 'Description:';
+  submit = 'Submit';
+  date: string;
+
+  constructor() {
+    this.date = moment().format('DD/MM/YYYY HH:mm'); //da formato a la fecha actual
+  }
 
   ngOnInit() {
   }
