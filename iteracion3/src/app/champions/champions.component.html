@@ -1,0 +1,31 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">{{arrayCampeonatos[0].year}}</th>
+      <th scope="col">{{arrayCampeonatos[1].year}}</th>
+      <th scope="col">{{arrayCampeonatos[2].year}}</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>{{arrayCampeonatos[0].winner}}</td>
+      <td>{{arrayCampeonatos[1].winner}}</td>
+      <td>{{arrayCampeonatos[2].winner}}</td>
+    </tr>
+
+    <tr>
+      <td><a href="{{arrayCampeonatos[0].url}}"><img src= '{{cleveland}}' alt="cleveland logo" width="200px" ></a></td>
+      <td><a href="{{arrayCampeonatos[1].url}}"><img src='{{golden}}' alt="golden state warriors logo" width ="200px"></a></td>
+      <td><a href="{{arrayCampeonatos[2].url}}"><img src='{{spurs}}' alt="spurs logo" width="200px"></a></td>
+    </tr>
+
+    <h3>Top-5 players</h3>
+    <tr *ngFor="let player of clevelandBest">
+    <td>{{player.player}}</td>
+    </tr>
+    <tr *ngFor="let player of goldenBest">
+      <td>{{player.player}}</td>
+    </tr>
+</tbody>
+</table>
