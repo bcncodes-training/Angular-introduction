@@ -1,20 +1,25 @@
-<h1>
-</h1>
-
 <div class="container">
+  <h1 class="text-center">{{title}}</h1>
   <div class="row">
-    <div class="col-md-4">
-        <ul *ngFor='let equipo of equipos'>
-          <li></li>
-        </ul>
-    </div>
-    <div class="col-md-4">
-        <h3>2018</h3>
-        <h4>Golden State Warriors</h4>
-    </div>
-    <div class="col-md-4">
-        <h3>2017</h3>
-        <h4>Golden State Warriors</h4>
+    <div class="col-md-4" *ngFor='let team of nbachampions'>
+      <div class="nba-champions">
+        <h3 class="text-center year">{{team.year}}</h3>
+        <h3 class="text-center team">{{team.team}}</h3>
+        <div class="logo">
+            <img src="{{team.logo}}" alt="{{team.team}}" class="logo" />
+        </div>
+
+        <hr />
+        <div class="best-players">
+            <p>Best players:</p>
+            <ul *ngFor='let players of team.bestPlayers'>
+              <li>
+                  {{players}}
+              </li>
+            </ul>
+        </div>
+
+      </div>
     </div>
   </div>
 </div>

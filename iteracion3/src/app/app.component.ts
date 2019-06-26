@@ -7,24 +7,27 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  equipos = [
+  title = "NBA Champions"
+
+  nbachampions = [
     {
-      Equipo: 'Equipo1',
-      Año: '2015',
-      Logo: 'logo',
-      BestPlayers: ['uno', 'dos', 'tres']
+      team: 'Toronto Raptors',
+      year: '2019',
+      logo: 'https://cdn.freebiesupply.com/images/large/2x/toronto-raptors-logo-transparent.png',
+      bestPlayers: ['Gasol, Marc', 'Boucher, Chris', 'Ibaka, Serge	', 'Anunoby, OG']
     },
     {
-      Equipo: 'Equipo2',
-      Año: '2016',
-      Logo: 'logo',
-      BestPlayers: ['uno', 'dos', 'tres']
+      team: 'Golden State Warriors',
+      year: '2016',
+      logo: 'https://upload.wikimedia.org/wikipedia/sco/0/01/Golden_State_Warriors_logo.svg',
+      bestPlayers: ['Lebron James2', 'Kyrie Irving', 'Kevin Love', 'JR Smith']
     },
     {
-      Equipo: 'Equipo3',
-      Año: '2017',
-      Logo: 'logo',
-      BestPlayers: ['uno', 'dos', 'tres']
+      team: 'San Antonio Spurs',
+      year: '2017',
+      logo: 'https://images.vexels.com/media/users/3/132006/isolated/preview/cb8990f888a45561c9d33a73b8c2c801-san-antonio-spurs-logo-by-vexels.png',
+      bestPlayers: ['Lebron James3', 'Kyrie Irving', 'Kevin Love', 'JR Smith']
     }
-  ]
+  ];
+
 }
