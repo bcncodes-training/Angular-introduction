@@ -1,0 +1,25 @@
+button {
+  color: white;
+  font-size: 1.25em;
+  text-shadow: 1px 1px #333;
+  border: 3px ridge #aaa;
+  border-radius: 10px;
+  padding: 1em;
+
+}
+
+button:disabled {
+  opacity: 0.4;
+}
+
+#red-btn {
+  background: red;
+}
+
+#blue-btn {
+  background: blue;
+}
+
+#green-btn {
+  background: green;
+}

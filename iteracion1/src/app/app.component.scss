@@ -1,0 +1,40 @@
+header {
+     background: #000;
+     padding: 1em;
+     color: white;
+     text-shadow: 1px solid #333;
+     text-align: center;
+}
+
+main {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+
+    figure {
+
+        background: url("/assets/stone.jpg");
+        padding: 1em;
+        border: 3px ridge #000;
+        margin: 0.5em;
+
+        img {
+            width: 400px;
+            height: 400px;
+            border: 3px ridge #333;  
+        }
+
+        figcaption {
+            position: relative;
+            top: 0px;
+            padding: 1em;
+            text-align: center;
+            text-shadow: 1px 1px #333;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            border: 3px ridge #333;  
+        }
+    }
+}

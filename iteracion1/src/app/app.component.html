@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<header>
+  <h1>{{ title }}</h1>
+</header>
+<main class="gallery">
+  <figure *ngFor="let picture of pictures">
+    <img [src]="picture.path" [alt]="picture.description"/>
+    <figcaption>
+      {{ picture.description }}
+    </figcaption>
+  </figure>
+</main>
+
