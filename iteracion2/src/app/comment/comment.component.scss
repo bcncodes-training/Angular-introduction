@@ -1,0 +1,13 @@
+.comment {
+  background: #dfdfff;
+  padding: 1em;
+
+  h6 { /*Cabecera del comentario*/
+    color: #3c3caa;
+
+  }
+}
+
+.comment + .comment {
+  margin-top: 0.5em;
+}

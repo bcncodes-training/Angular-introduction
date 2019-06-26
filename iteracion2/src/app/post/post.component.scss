@@ -1,0 +1,21 @@
+
+h2 {
+  /*Titulo del post*/
+
+  border-bottom: 2px solid #000;
+  padding: 0.5em 0.5em 0.5em 0px;
+
+  small {
+    /*fecha del post*/
+    color: #aaa;
+    font-size: 0.75em;
+  }
+}
+
+img {
+  width: 480px;
+  float: right;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+  border: 3px ridge #666;
+}

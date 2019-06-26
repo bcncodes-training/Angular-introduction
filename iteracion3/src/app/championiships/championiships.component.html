@@ -1,0 +1,14 @@
+<h2>Basket winners</h2>
+<section class="teams">
+  <article *ngFor="let team of teams">
+    <h3>{{ team.years }}</h3>
+    <h4>{{ team.name }}</h4>
+    <figure>
+      <img [src]="team.imageURL"/>
+    </figure>
+    <h5>Best players:</h5>
+    <ul>
+      <li *ngFor="let player of team.players">{{ player }}</li>
+    </ul>
+  </article>
+</section>

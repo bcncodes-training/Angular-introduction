@@ -4,7 +4,7 @@
 </header>
 <main class="gallery">
   <figure *ngFor="let picture of pictures">
-    <img src="{{ picture.path }}" alt="{{ picture.description }}"/>
+    <img [src]="picture.path" [alt]="picture.description"/>
     <figcaption>
       {{ picture.description }}
     </figcaption>
