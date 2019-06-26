@@ -16,12 +16,15 @@ export class CommentsComponent implements OnInit {
   comment3 = 'Lorem ipsum dolor sit amet, consectetur';
   comment4 = '';
 
-  date: moment.Moment;
+  fecha:string;
 
-  constructor() {}
+  constructor() {
+    moment.locale('es');
+    this.fecha = moment().format('LLL');
+  }
 
   ngOnInit() {
-    this.date = moment();
+    //this.date = moment();
   }
 
 }
