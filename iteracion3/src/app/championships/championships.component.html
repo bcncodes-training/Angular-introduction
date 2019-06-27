@@ -1,0 +1,16 @@
+<ul>
+    <li *ngFor='let champ of championships'>
+        <h2>{{champ.season}}</h2>
+        <a href={{champ.url}}><h4>{{champ.champion}}</h4></a>
+        <a href={{champ.url}}>
+          <img src={{champ.logo}} alt="">
+        </a>
+        <h5>Best Player</h5>
+        <ul>
+          <li *ngFor='let player of champ.bestPlayers'>
+            {{player.name}}
+          </li>
+        </ul>
+
+    </li>
+  </ul>
