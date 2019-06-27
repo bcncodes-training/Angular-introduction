@@ -7,16 +7,25 @@ import *as moment from 'moment' // busca todo lo que tiene la libreria moment y 
   styleUrls: ['./comments-component.component.scss']
 })
 export class CommentsComponentComponent implements OnInit {
-  comments ="Comments"
-  user1 = "John"
-  commentUser1 = "COMENTARIO NUMERO1"
-  fecha1 : any = moment().format("15-07-2018");
-  user2 = "Lisa"
-  commentUser2 = "COMENTARIO NUMERO2"
-  fecha2 : any = moment().format("15-06-2018");
-  user3 = "Logan"
-  commentUser3 = "COMENTARIO NUMERO3"
-  fecha3 : any = moment().format("15-05-2018");
+  commentsHeader ="Comments"
+  Arrcomments: Array<Object> = [
+  {
+    user:'John',
+    date: '15-07-2018',
+    comentario:'COMENTARIO NUMERO1'
+  },
+  {
+    user : "Lisa",
+    date: moment().format("15-06-2018"),
+    comentario : "COMENTARIO NUMERO2",
+
+  },
+  {
+    user : "Logan",
+    date :  moment().format("15-05-2018"),
+    comentario : "COMENTARIO NUMERO3"
+  }
+  ]
 
 
   constructor() { }

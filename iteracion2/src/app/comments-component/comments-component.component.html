@@ -1,14 +1,12 @@
 <div class="comment-section">
   <div class="row pt-5 pb-5 bg-light">
     <div class="col-xl-3 mx-auto">
-         <h4 class="pb-3">{{comments}}</h4>
+         <h4 class="pb-3">{{commentsHeader}}</h4>
          <hr class="bg-dark">
-        <p class="font-weight-bold">{{user1}} {{fecha1}}</p>
-        <p>{{commentUser1}}</p>
-        <p class="font-weight-bold">{{user2}}{{fecha2}}</p>
-        <p>{{commentUser2}}</p>
-        <p class="font-weight-bold">{{user3}}{{fecha3}}</p>
-        <p>{{commentUser3}}</p>
+         <div *ngFor='let comment of Arrcomments'>
+        <p class="font-weight-bold">{{comment.user}} {{comment.date}}</p>
+        <p>{{comment.comentario}}</p>
+      </div>
 
     </div>
   </div>
