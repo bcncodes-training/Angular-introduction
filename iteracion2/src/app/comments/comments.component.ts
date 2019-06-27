@@ -16,7 +16,7 @@ export class CommentsComponent implements OnInit {
   comment3 = 'Lorem ipsum dolor sit amet, consectetur';
   comment4 = '';
 
-  comments: Array<Object> = [
+  comments: Array<any> = [
     {
       id: 1,
       name: 'Katy',
@@ -54,8 +54,8 @@ export class CommentsComponent implements OnInit {
     this.fecha = moment().format('LLL');
   }
 
-  addComment(NewComment: string, NewName: string) {
-    const elem = {id: this.comments.length + 1 , name: NewName, comment: NewComment, fecha: this.fecha };
+  addComment(NewName: string, NewComment: string) {
+    const elem = { id: this.comments.length + 1 , name: NewName, comment: NewComment, fecha: this.fecha };
     //this.comments.push(elem);
     this.comments = this.comments.concat(elem);
   }
