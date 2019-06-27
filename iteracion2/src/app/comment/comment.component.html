@@ -1,19 +1,24 @@
-<h3>Comentarios</h3>
+<h3>Comentarios <button class="btn btn-success" (click)="toggleCommentBoxVisibility()" title="Open add comment dialog">+</button></h3>
 
-<article class='comment' *ngFor="let comment of comments">
+<article class='comment' *ngFor="let comment of comments;  trackBy: commentTrackerFunction; let i = index">
   <h6>By <strong>{{ comment.autor }}</strong> at <time>{{ comment.fecha }}</time></h6>
   <blockquote class="blockquote">{{ comment.contenido }}</blockquote>
 </article>
 
-<form class="comment-write">
-  <h4>Escribe un comentario</h4>
-  <div class="form-group">
-    <label>Autor</label>
-    <input type="text" ngModel="newCommentAuthor"/>
-  </div>
-  <div class="form-group">
-    <label>Comentario</label>
-    <textarea>{{ newCommentContent }}</textarea>
-  </div>
-  <button [disabled]='botonDesactivado' (click)="mostrarAviso()">Publicar</button>
-</form>
+<div class="comment-write" *ngIf="commentBoxIsVisible">
+
+  <form>
+    <h4>Escribe un comentario <button class="btn btn-danger" (click)="toggleCommentBoxVisibility()">X</button></h4>
+    <div class="form-group">
+      <label>Autor</label>
+      <br/>
+      <input type="text" name="comment-author" (input)="newCommentAuthor = $event.target.value"/>
+    </div>
+    <div class="form-group">
+      <label>Comentario</label>
+      <br/>
+      <input type="text" name="comment-content" (input)="newCommentContent = $event.target.value"/>
+    </div>
+    <button type="button" [disabled]='botonDesactivado' (click)="enviarComentario()">Publicar</button>
+  </form>
+</div>
