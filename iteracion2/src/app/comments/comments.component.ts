@@ -25,8 +25,6 @@ export class CommentsComponent implements OnInit {
     return comment.id;
   }
 
-
-
   /*
   addComment(event:any, formulario:any):void {
     //const elem = { id: this.comments.length + 1 , name: NewName, comment: NewComment, fecha: this.fecha };
@@ -55,7 +53,7 @@ export class CommentsComponent implements OnInit {
       name: formulario[0].value,
       comment: formulario[1].value,
       fecha: this.fecha
-    }
+    };
 
     this.comments = [{
         id: 1,
@@ -84,18 +82,10 @@ export class CommentsComponent implements OnInit {
     ];
 
     formulario.reset();
-
-
-
-
-  }
-
-  trackByCommentId(comment: any): string {
-    return comment.id;
   }
 
   ngOnInit() {
-    //this.date = moment();
+
   }
 
 }
