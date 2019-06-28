@@ -1,0 +1,29 @@
+<div class="container">
+  <h1 class="text-center">{{title}}</h1>
+  <div class="row">
+    <div class="col-md-4" *ngFor='let team of nbachampions'>
+      <div class="nba-champions">
+        <h3 class="text-center year">{{team.year}}</h3>
+        <h3 class="text-center team">{{team.team}}</h3>
+        <div class="logo">
+            <img src="{{team.logo}}" alt="{{team.team}}" class="logo" />
+        </div>
+
+        <hr />
+        <div class="best-players">
+            <p>Best players:</p>
+            <ul *ngFor='let players of team.bestPlayers; index as i; let par = even; let impar = odd;' [ngClass] = '{bgList1:par, bgList2:impar}'>
+              <li>
+                  {{i}} / {{players}}
+              </li>
+            </ul>
+        </div>
+
+        <hr />
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

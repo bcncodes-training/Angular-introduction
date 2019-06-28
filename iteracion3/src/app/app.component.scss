@@ -1,0 +1,59 @@
+@import '../../node_modules/material-colors/dist/colors.scss';
+
+h1 {
+  padding: 3rem 0;
+  font-weight: 700;
+  color: $md-blue-500;
+}
+
+.nba-champions {
+  box-shadow: 0 0 20px #ededed;
+  padding: 2rem;
+  transition: transform .2s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.year {
+  font-weight: 700;
+  color: $md-blue-500;
+}
+
+.team {
+  color: $md-pink-a400;
+}
+
+.logo {
+  margin: 1rem 0;
+  text-align: center;
+  img {
+    max-height: 200px;
+  }
+}
+
+.best-players {
+  p {
+    color: $md-blue-500;
+    font-weight: 600;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.bgList1 {
+  background: $md-grey-100;
+}
+
+.bgList2 {
+  background: #fff;
+}
