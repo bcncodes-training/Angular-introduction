@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import *as moment from 'moment' // busca todo lo que tiene la libreria moment y le asocia el nombre de moment
 
 @Component({
@@ -7,6 +7,7 @@ import *as moment from 'moment' // busca todo lo que tiene la libreria moment y 
   styleUrls: ['./comments-component.component.scss']
 })
 export class CommentsComponentComponent implements OnInit {
+
   commentsHeader ="Comments"
   Arrcomments: Array<Object> = [
   {
@@ -26,6 +27,22 @@ export class CommentsComponentComponent implements OnInit {
     comentario : "COMENTARIO NUMERO3"
   }
   ]
+ values = '';
+ obj = {
+   user:'',
+   date:'',
+   comentario:'',
+ };
+
+ addName(event:any){
+   this.values = event.target.value;
+   this.obj.user = this.values;
+
+    }
+
+  submit(){
+    this.Arrcomments.push(this.obj)
+  }
 
 
   constructor() { }
