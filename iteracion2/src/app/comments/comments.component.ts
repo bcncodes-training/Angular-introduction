@@ -21,12 +21,13 @@ export class CommentsComponent implements OnInit {
     this.fecha = moment().format('LLL');
   }
 
-  commentTrackerFunction(index: number, comment: any) {
+  trackByCommentId(comment: any):string{
     return comment.id;
   }
 
-  /*
+
   addComment(event:any, formulario:any):void {
+
     //const elem = { id: this.comments.length + 1 , name: NewName, comment: NewComment, fecha: this.fecha };
     //this.comments.push(elem);
     //this.comments = this.comments.concat(elem);
@@ -42,7 +43,9 @@ export class CommentsComponent implements OnInit {
 
     formulario.reset();
   }
-  */
+
+
+  /*
 
   addComment(event: any, formulario: any): void {
 
@@ -78,11 +81,12 @@ export class CommentsComponent implements OnInit {
         name: 'Leia',
         comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in cursus leo',
         fecha: '25/06/2019'
-      }, comentario
-    ];
+      }, comentario];
 
     formulario.reset();
   }
+
+  */
 
   ngOnInit() {
 
