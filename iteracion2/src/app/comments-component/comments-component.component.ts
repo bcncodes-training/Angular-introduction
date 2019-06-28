@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {comments} from '../shared/data/comments.data';
+
 
 @Component({
   selector: 'app-comments-component',
@@ -8,27 +10,59 @@ import { Component, OnInit } from '@angular/core';
 export class CommentsComponentComponent implements OnInit {
   titulo = 'Comments:';
 
-  comments: Array<Object> = [{
-    id: 1,
-    name: 'Katy',
-    date: '25/04/2019 15:26',
-    comentario: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum lacus ac felis hendrerit, sed molestie mi laoreet. Proin dictum lacus ac felis hendrerit, sed molestie mi laoreet.'
-  },{
-    id: 2,
-    name: 'Salomon',
-    date: '25/04/2019 17:26',
-    comentario: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum lacus ac felis hendrerit, sed molestie mi laoreet.'
-  },{
-    id: 3,
-    name: 'Bondary',
-    date: '26/04/2019 16:26',
-    comentario: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-  }];
+  public comments:Array<object>;
 
+  constructor() {
+    this.comments = comments;
+  }
 
+/*   saveComment(event:any, formulario:any):void{
+    event.preventDefault();
+    this.comments.push({
+      name: formulario[0].value,
+      date: new Date(),
+      time: new Date(),
+      comentario: formulario[1].value
+        })
 
+      formulario.reset();
+  } */
 
-  constructor() { }
+  saveComment(event:any, formulario:any):void{
+    event.preventDefault();
+
+    let comentario = {
+      id:4,
+      name: formulario[0].value,
+      date: new Date(),
+      time: new Date(),
+      comentario: formulario[1].value
+        };
+
+    this.comments = [{
+      id: 1,
+      name: 'Katy',
+      date: '25/04/2019 15:26',
+      comentario: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    },{
+      id: 2,
+      name: 'Salomon',
+      date: '25/04/2019 17:26',
+      comentario: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum lacus ac felis hendrerit, sed molestie mi laoreet.'
+    },{
+      id: 3,
+      name: 'Bondary',
+      date: '26/04/2019 16:26',
+      comentario: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    }, comentario];
+
+    formulario.reset();
+
+  }
+
+  trackByCommentId(comment: any):string{
+    return comment.id;
+  }
 
   ngOnInit() {
   }
