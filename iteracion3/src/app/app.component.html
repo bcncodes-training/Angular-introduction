@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h2>NBA Champions</h2>
+
+
+<ul class='lista'>
+  <li class='lista' *ngFor='let equipo of ganadores'>
+    <div class='ano'>{{equipo.ano}}</div>
+    <div class='name'>{{equipo.name}}</div>
+    <img [src]='equipo.img' alt="">
+    <div class='bestPlayer'>Best Players</div>
+    <ul class='jugadores'>
+      <li class='jugadores' *ngFor='let jugador of equipo.bPlayers'>{{jugador}}</li>
+    </ul>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>

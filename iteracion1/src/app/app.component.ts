@@ -6,12 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Sweet kittens';
+  title = 'Dulces Gatitos';
   foto1 = '../assets/images/gatitos1.jpg';
   foto2 = '../assets/images/gatitos2.jpg';
   foto3 = '../assets/images/gatitos3.jpg';
-  piefoto1 = 'Monton de gatitos';
-  piefoto2 = 'Gatito chiquitin';
-  piefoto3 = 'Gatito panchon';
+  piefoto1 = 'Gatitos 1';
+  piefoto2 = 'Gatitos 2';
+  piefoto3 = 'Gatitos 3';
 
 }

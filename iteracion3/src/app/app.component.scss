@@ -1,0 +1,45 @@
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+ }
+
+ul.lista {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  li {
+    width: 8cm;
+    height: 1cm;
+    text-align: center;
+    .ano {
+      margin: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .name {
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .bestPlayer {
+      margin: 20px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+  }
+  ul.jugadores {
+    position: relative;
+    left: 35px;
+    li {
+      font-size: 11px;
+      height: 15px;
+      list-style-type: disc;
+      line-height: 0.25em;
+      text-align: left;
+    }
+  }
+}
+

@@ -3,14 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CommentsComponent } from './comments/comments.component';
-import { NewCommentComponent } from './new-comment/new-comment.component';
+import { MainComponentComponent } from './main-component/main-component.component';
+import { CommentsComponentComponent } from './comments-component/comments-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CommentsComponent,
-    NewCommentComponent
+    MainComponentComponent,
+    CommentsComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -18,6 +18,6 @@ import { NewCommentComponent } from './new-comment/new-comment.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [CommentsComponent, NewCommentComponent]
+  exports: [MainComponentComponent, CommentsComponentComponent]
 })
 export class AppModule { }

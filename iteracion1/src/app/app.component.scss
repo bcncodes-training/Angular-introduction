@@ -27,10 +27,13 @@ div {
         img{
           width: 10rem;}
         }
+      &:nth-child(3){
+        img{
+          width: 20rem;}
+        }
       figcaption{text-align: left;
       font-size: small}
     }
   }
 }
-
 

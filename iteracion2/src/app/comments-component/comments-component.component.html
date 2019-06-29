@@ -1,0 +1,23 @@
+<h2>{{title}}</h2>
+
+<div *ngFor="let comment of comments; trackBy:commentTrackerFunction">
+  <ng-container *ngIf="comment.name > '' && comment.msg > ''; else noComment">
+    <h4>{{ comment.name }}<span>{{ comment.date }}</span></h4>
+    <p>{{comment.msg}}</p>
+  </ng-container>
+</div>
+
+<ng-template #noComment>
+  <p [ngStyle]="{color: 'red'}">Tienes que rellenar los campos</p>
+</ng-template>
+
+<form #formu class='formulario'>
+  <h2>{{titleForm}}</h2>
+  {{name}}
+  <input #newName type="text">
+  {{msg}}
+  <textarea #newMessage name="" id="" cols="30" rows="10"></textarea>
+  <button (click)='addComment($event,newName,newMessage,formu)' >{{submit}}</button>
+</form>
+
+
