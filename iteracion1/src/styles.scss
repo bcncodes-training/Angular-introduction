@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,800&display=swap');
+body{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Monserrat', Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: center;
+    background-color:rgb(228, 215, 215);
+
+        h1{
+            
+            font-size:800;
+            font-weight: bold;
+            color:#333;
+        }
+        h2{
+            font-size:250%;
+            font-weight:lighter;
+            color:#333;
+        }
+#foticos{
+    width:80vw;
+    height: auto;
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+    left:30vw;
+    div.col-md-4 figcaption img{
+        width:20vw;
+        height: auto;
+    }
+}
+}
