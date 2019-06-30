@@ -1,0 +1,10 @@
+{
+  "terminal.integrated.shell.windows": "C:\\cygwin64\\bin\\bash.exe",
+  "terminal.integrated.env.windows": { "CHERE_INVOKING": "1" },
+  "terminal.integrated.shellArgs.windows": [ "--login" ]
+}
+
+*********************************************************
+Ayuda para el cambio de origin en gitHub
+
+https://gist.github.com/DianaEromosele/fa228f6f6099a8996d3cb891109ab975
