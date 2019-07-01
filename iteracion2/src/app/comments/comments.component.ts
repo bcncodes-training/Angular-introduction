@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { comments } from '../comments';
+import { comments } from '../shared/data/comments';
 
 @Component({
   selector: 'app-comments',
@@ -8,10 +8,15 @@ import { comments } from '../comments';
 })
 export class CommentsComponent implements OnInit {
   title = 'Comments:';
-  comments = comments;
+  comments = [];
 
 
-  constructor() {}
+  constructor() {
+    this.comments=comments;
+  }
+  commentTrackerFunction(index: number, comment: any) {
+    return comment.id;
+  }
 
   ngOnInit() {
   }

@@ -1,8 +1,10 @@
 <div>
+    <form  #formulario>
   <h2>{{title}}</h2>
   {{name}}
-  <input type="text" >
+  <input type="text" #input1 (focusout)="inFocusOut($event)">
   {{msg}}
-  <textarea name="" id="" cols="30" rows="10"></textarea>
-  <button>{{submit}}</button>
+  <textarea name="" #textArea1 id="" cols="30" rows="10" (focusout)="taFocusOut($event)"></textarea>
+  <button (click)='addMessage($event, formulario)'>{{submit}}</button>
+    </form>
 </div>
