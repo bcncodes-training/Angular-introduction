@@ -1,4 +1,4 @@
-import { Component, OnInit, ModuleWithComponentFactories } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ite2-comments',
@@ -7,11 +7,7 @@ import { Component, OnInit, ModuleWithComponentFactories } from '@angular/core';
 })
 export class CommentsComponent implements OnInit {
 
-
-
-  constructor() {
-
-  }
+  constructor() { }
 
   ngOnInit() {
   }
