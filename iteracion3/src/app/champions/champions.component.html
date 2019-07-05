@@ -1,0 +1,38 @@
+<div class='bg-dark' >
+<p class='  bg-dark text-white' > Fantachampions :)</p>
+<div class= " bg-warning  d-flex justify-content-center" >
+
+
+<table class='m-5 bg-dark text-white'>
+  <tr>
+    <td class="font-weight-bold" *ngFor='let equi of Champ' class='' >{{ equi.anno }}</td>
+  </tr>
+  <tr>
+    <td class="text-uppercase font-weight-bold " *ngFor='let equi of Champ'>{{ equi.name }}</td>
+  </tr>
+  <tr>
+    <td *ngFor='let equi of Champ'><img  width="150"src={{equi.image}} /></td>
+  </tr>
+  <tr>
+    <td *ngFor='let equi of Champ'> <span class=" font-weight-bold ">Best Pleyers</span>
+      <ul class="list-group list-group-flush">  <li class="list-group-item bg-dark text-left " *ngFor = 'let item of equi.players'> {{item}} </li> </ul></td>
+  </tr>
+
+</table>
+
+</div>
+</div>
+<!-- ALTERNATIVA
+
+
+<table>
+  <tr *ngFor='let equi of Champ'>
+    <td>{{ equi.anno }}</td>
+    <td>{{ equi.name }}</td>
+    <td><img  width="150"src={{equi.image}} /></td>
+    <td><ul> <li *ngFor = 'let item of equi.players'> {{item}} </li> </ul></td>
+  </tr>
+</table>
+
+
+-->
