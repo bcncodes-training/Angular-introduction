@@ -3,14 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainComponent } from './main/main.component';
 import { CommentsComponent } from './comments/comments.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
-    CommentsComponent
+    CommentsComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
@@ -18,6 +18,6 @@ import { CommentsComponent } from './comments/comments.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [MainComponent, CommentsComponent]
+  exports: [CommentsComponent, MainComponent]
 })
 export class AppModule { }
