@@ -1,6 +1,6 @@
 <div class="col-md-4" *ngFor="let champion of latestChampions">
   <h2>{{ champion.year }}</h2>
-  <img src="{{ champion.urlImg }}" class="img-fluid my-5 centered">
+  <a href="{{ champion.url }}"><img src="{{ champion.Image }}" class="img-fluid my-5 centered"></a>
   <h3>{{ champion.team }}</h3>
   <h4>Best players</h4>
   <ul>
