@@ -1,12 +1,21 @@
 <div class="col-md-4" *ngFor="let champion of latestChampions">
   <h2>{{ champion.year }}</h2>
-  <a href="{{ champion.url }}"><img src="{{ champion.Image }}" class="img-fluid my-5 centered"></a>
   <h3>{{ champion.team }}</h3>
+  <a href="{{ champion.url }}"><img src="{{ champion.Image }}" class="img-fluid my-5 centered"></a>
   <h4>Best players</h4>
   <ul>
     <li *ngFor="let player of champion.bestPlayers" class="text-left">{{ player }}</li>
   </ul>
 </div>
-
+<!-- CON TABLAS
+<table>
+  <tr *ngFor='let champion of latestChampions'>
+    <td>{{ champion.year }}</td>
+    <td>{{ champion.team }}</td>
+    <td><a href="{{ champion.url }}"><img  width="100"src={{ champion.Image }} /></a></td>
+    <td><ul> <li *ngFor = "let player of champion.bestPlayers"> {{item}} </li> </ul></td>
+  </tr>
+</table>
+-->
 
 
