@@ -1,0 +1,10 @@
+<!-- CON TABLAS
+<table>
+  <tr *ngFor='let champion of latestChampions'>
+    <td>{{ champion.year }}</td>
+    <td>{{ champion.team }}</td>
+    <td><a href="{{ champion.url }}"><img  width="100"src={{ champion.Image }} /></a></td>
+    <td><ul> <li *ngFor = "let player of champion.bestPlayers"> {{player}} </li> </ul></td>
+  </tr>
+</table>
+-->
