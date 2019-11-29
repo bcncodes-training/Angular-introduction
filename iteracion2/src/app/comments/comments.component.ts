@@ -16,7 +16,7 @@ export class CommentsComponent implements OnInit {
   comment3 = 'Lorem ipsum dolor sit amet, consectetur';
   comment4 = '';
 
-  fecha:string;
+  fecha: string;
 
   constructor() {
     moment.locale('es');
@@ -24,7 +24,7 @@ export class CommentsComponent implements OnInit {
   }
 
   ngOnInit() {
-    //this.date = moment();
+  /*this.date = moment();*/
   }
 
 }

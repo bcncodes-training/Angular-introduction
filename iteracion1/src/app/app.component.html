@@ -1,24 +1,48 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="global">
-  <h1 class="titulo">
-  {{ title }}!
+<div style="text-align:center">
+  <h1>
+     {{ title2 }}
   </h1>
-  <div class="container">
-    <figure class="photo1">
-      <img src="{{photo1}}">
-      <figcaption>Libélula</figcaption>
-    </figure>
-
-    <figure class="photo2">
-      <img src="{{photo2}}">
-      <figcaption>Golden Retriever</figcaption>
-    </figure>
-
-    <figure class="photo3">
-      <img src="{{photo3}}">
-      <figcaption>Panda Rojo</figcaption>
-    </figure>
-  </div>
 </div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    <div class="card" style="width: 18rem;">
+      <a href="../assets/foto-3.jpg" target="_blank">
+      <img src="../assets/foto-3.jpg" class="card-img-top" alt="cafe">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">Angular</h5>
+        <p class="card-text">La bebida estimulante que nos mantiene despiertos.</p>
+        <a href="http://bracafe.com/" class="btn btn-primary" target="_blank">buy a coffee</a>
+      </div>
+      </div>
+    </div>
+    <div class="col-sm">
+    <div class="card" style="width: 18rem;">
+        <a href="../assets/foto-2.jpg" target="_blank">
+      <img src="../assets/foto-2.jpg" class="card-img-top" alt="faro">
+        </a>
+      <div class="card-body">
+        <h5 class="card-title">Angular</h5>
+        <p class="card-text">La luz que me guía en los componentes y servicios.</p>
+        <a href="https://spain.100montaditos.com/es/" class="btn btn-primary" target="_blank">Just do it</a>
+      </div>
+      </div>
+    </div>
+    <div class="col-sm">
+    <div class="card" style="width: 18rem;">
+        <a href="../assets/foto-1.jpg" target="_blank">
+      <img src="../assets/foto-1.jpg" class="card-img-top" alt="perro">
+        </a>
+      <div class="card-body">
+        <h5 class="card-title">Angular</h5>
+        <p class="card-text">Mi cara cuando no consigo que el módulo trabaje.</p>
+        <a href="http://bracafe.com/" class="btn btn-primary" target="_blank">buy a coffee</a>
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
 
 <router-outlet></router-outlet>
