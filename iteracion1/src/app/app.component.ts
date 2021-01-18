@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
+<<<<<<< HEAD
   selector: 'p-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
@@ -14,4 +15,17 @@ export class AppComponent {
   figImg1 = 'Torres del Paine, Patagonia';
   figImg2 = 'Colorado Canyon River';
   figImg3 = 'Serengueti Masai Mara';
+=======
+  selector: 'pr-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
+  title: string;
+  title2: string;
+  constructor() {
+    this.title = 'Iteracion 1';
+    this.title2 = 'Galería';
+  }
+>>>>>>> 972f7d53894938cec951e7011cff9144f16ae353
 }

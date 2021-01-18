@@ -16,7 +16,25 @@
     "deprecation": {
       "severity": "warning"
     },
+<<<<<<< HEAD
     "eofline": true,
+=======
+    "component-class-suffix": true,
+    "contextual-lifecycle": true,
+    "directive-class-suffix": true,
+    "directive-selector": [
+      true,
+      "attribute",
+      "pr",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "pr",
+      "kebab-case"
+    ],
+>>>>>>> 972f7d53894938cec951e7011cff9144f16ae353
     "import-blacklist": [
       true,
       "rxjs/Rx"

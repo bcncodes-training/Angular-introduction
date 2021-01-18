@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+<<<<<<< HEAD
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/milligram/dist/milligram.min.css",
               "src/styles.css"
@@ -36,6 +37,16 @@
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "node_modules/moment/min/moment.min.js"
+=======
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/milligram/dist/milligram.min.css",
+              "src/styles.scss"
+            ],
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./node_modules/moment/min/moment.min.js"
+>>>>>>> 972f7d53894938cec951e7011cff9144f16ae353
             ]
           },
           "configurations": {
@@ -97,7 +108,11 @@
               "src/assets"
             ],
             "styles": [
+<<<<<<< HEAD
               "src/styles.css"
+=======
+              "src/styles.scss"
+>>>>>>> 972f7d53894938cec951e7011cff9144f16ae353
             ],
             "scripts": []
           }

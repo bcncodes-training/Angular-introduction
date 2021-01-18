@@ -21,6 +21,7 @@ module.exports = function (config) {
       },
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
+<<<<<<< HEAD
     jasmineHtmlReporter: {
       suppressAll: true // removes the duplicated traces
     },
@@ -31,6 +32,12 @@ module.exports = function (config) {
         { type: 'html' },
         { type: 'text-summary' }
       ]
+=======
+    coverageIstanbulReporter: {
+      dir: require('path').join(__dirname, './coverage/iteracion1'),
+      reports: ['html', 'lcovonly', 'text-summary'],
+      fixWebpackSourcePaths: true
+>>>>>>> 972f7d53894938cec951e7011cff9144f16ae353
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
