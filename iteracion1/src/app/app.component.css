@@ -50,7 +50,8 @@ p {
 
 .container{
   display: flex;
-  margin-top: 9rem;
+  margin-top: 6rem;
+  z-index: -1;
   padding: 0 16px;
   max-width: 100%;
   max-height: 100%;
@@ -83,18 +84,6 @@ p {
 figcaption{
   font-size: 14px;
 }
-a,
-a:visited,
-a:hover {
-  color: #1976d2;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #125699;
-}
-
-
 
 
 /* Responsive Styles */
