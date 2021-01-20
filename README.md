@@ -59,3 +59,5 @@ Toda la información se encuentra en [NBA Champions](https://en.wikipedia.org/wi
 **Nota** 
 Se requiere iterar sobre dos colecciones diferentes para mostrar toda la información: `Championships` y `best-players` de cada equipo.
 <!-- ::: -->
+
+<!--https://bbbootstrap.com/snippets/bootstrap-comment-section-form-ratings-98792632-->
