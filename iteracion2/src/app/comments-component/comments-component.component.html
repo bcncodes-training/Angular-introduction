@@ -1,6 +1,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <br>
 <div class="container">
+  <!--how many mesages-->
 <!-- Titulo noticias-->
   <div class="card">
     <div class="card-content">
@@ -14,7 +15,7 @@
     <footer class="card-footer">
       <p class="card-footer-item">
         <span>
-          View on <a href="#">Twitter</a>
+          {{ longArr }}
         </span>
       </p>
       <p class="card-footer-item">
@@ -26,10 +27,10 @@
   </div>
 <br>
   <!--comentarios-->
-  <article class="media" *ngFor="let comment of allComments">
+  <article class="media" *ngFor="let comment of allComments; let numText = index">
     <figure class="media-left">
       <p class="image is-64x64">
-        <img src="https://bulma.io/images/placeholders/128x128.png">
+        <img src="{{avatarsUser}}">
       </p>
     </figure>
     <div class="media-content">
@@ -55,7 +56,7 @@
       </nav>
     </div>
     <div class="media-right">
-      <button class="delete"></button>
+      <button class="delete" (click) = "deleteMe(numText)"></button>
     </div>
   </article>
 
@@ -64,7 +65,7 @@
   <article class="media">
     <figure class="media-left">
       <p class="image is-64x64">
-        <img src="https://bulma.io/images/placeholders/128x128.png">
+        <img src="{{avatarsUser}}">
       </p>
     </figure>
     <div class="media-content">
