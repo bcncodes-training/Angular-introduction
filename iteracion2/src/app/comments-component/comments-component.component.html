@@ -1,104 +1,99 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<br>
 <div class="container">
-
-  <!--Written ones already-->
-  <div class="be-comment-block mb-3 border  rounded-top pt-3 pb-3 pl-5 pr-5">
-    <h1 class="comments-title h3 mb-2">{{ title }} ({{ longArr }})</h1>
-    <div class="be-comment">
-      <!-- <div class="be-img-comment d-flex justify-content-start">
-        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="portrait1" class="portraits border border-light rounded-circle">
-      </div> -->
-      <div *ngFor="let oneComment of allComments" class="row d-inline-flex be-comment content mt-3 mb-2 ml-1">
-
-        <span class="be-comment-name text-capitalize font-weight-bold mr-2">
-          {{ oneComment.nameUser }}
+<!-- Titulo noticias-->
+  <div class="card">
+    <div class="card-content">
+      <p class="title">
+        “{{ title }}”
+      </p>
+      <p class="subtitle">
+        Robert Garcia
+      </p>
+    </div>
+    <footer class="card-footer">
+      <p class="card-footer-item">
+        <span>
+          View on <a href="#">Twitter</a>
         </span>
-        <span class="be-comment-time ml-2">
-          <i class="fa fa-clock-o"></i>
-          {{ oneComment.timeUser()}}
+      </p>
+      <p class="card-footer-item">
+        <span>
+          Share on <a href="#">Facebook</a>
         </span>
-        <div class="row">
-        <p class=" row-12 be-comment-text pt-3 pb-5 pr-5 pl-5 mr-5">
-          {{ oneComment.textUser}}
+      </p>
+    </footer>
+  </div>
+<br>
+  <!--comentarios-->
+  <article class="media" *ngFor="let comment of allComments">
+    <figure class="media-left">
+      <p class="image is-64x64">
+        <img src="https://bulma.io/images/placeholders/128x128.png">
+      </p>
+    </figure>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong class="text-capitalize">{{comment.nameUser}}</strong> <small class="ml-5">{{ comment.timeUser }}</small>
+          <br>
+          {{ comment.textUser }}
         </p>
       </div>
-        <!-- <div class="rating d-flex flex-row-reverse mt-1 ml-1 justify-content-end" id="ratingComment">
-          <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1" class="ml-0">☆</label>
-        </div> -->
-      </div>
-
+      <nav class="level is-mobile">
+        <div class="level-left">
+          <a class="level-item">
+            <span class="icon is-small"><i class="fa fa-reply"></i></span>
+          </a>
+          <a class="level-item">
+            <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+          </a>
+          <a class="level-item">
+            <span class="icon is-small"><i class="fa fa-heart"></i></span>
+          </a>
+        </div>
+      </nav>
     </div>
-  </div>
+    <div class="media-right">
+      <button class="delete"></button>
+    </div>
+  </article>
 
-  <!--T0 be written-->
-  <div class="contenido mb-5 d-none">
-   <div class="card row md-12 border mt-5">
-     <div class="row mt-5">
-       <div class="col-2"><img src="{{ avatarsUser }}" alt="porLaCara" class="rounded-circle"></div>
-       <div class="col-10">
-         <div class="comment-box ml-2">
-           <h4>Add a comment</h4>
-           <div class="rating d-flex flex-row-reverse mt-1 ml-1 justify-content-end">
-             <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1" class="ml-0">☆</label>
-           </div>
-           <div class="comment-area">
-             <textarea class="form-control bg-light border border-secondary" name="comentar" id="comentar" cols="10" rows="4" placeholder="What's say you?"></textarea>
-           </div>
-           <div class="comment-btns mt-2">
-             <div class="row d-flex justify-content-between">
-               <div class="col-6">
-                 <div class="toLeft">
-                   <button class="btn btn-danger btn-lg text-light font-weight-bold" (click) = "deleteMe()">Cancel</button>
-                 </div>
-               </div>
-               <div class="col-6 ">
-                 <div class="toRight d-flex justify-content-end">
-                   <button class="btn btn-success send btn-lg text-light font-weight-bold" (click) = "aggregateMe()">Submit</button>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
-  </div>
-  <!--End contenido-->
-  <!--form-->
-
-  <form action="" class="form-block " #formulario>
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 fl_icon">
-        <div class="icon">
-          <i class="fa fa-user"></i>
-        </div>
-        <input type="text" id="myName" class="form-input text-capitalize" placeholder="Your Name" [(ngModel)] = "oneComment.nameUser"/>
-        <p class="mt-3 text-danger">{{oneComment.nameUser | uppercase}}</p>
-      </div>
-      <div class="col-xs-12 col-sm-6 fl_icon d-none">
-        <div class="icon">
-          <i class="fa fa-envelope-o"></i>
-        </div>
-        <input type="text" class="form-input" placeholder="Your email">
-      </div>
-      <div class="col-xs-12">
-        <div class="form-group pr-5">
-          <div class="icon">
-            <i class="fa fa-pencil ml-3"></i>
-          </div>
-          <textarea name="" id="toFill" required cols="150" rows="50" class="form-input md-auto ml-3" placeholder="Type your text"[(ngModel)]="oneComment.textUser"></textarea>
+  <br>
+  <!--Submit comment-->
+  <article class="media">
+    <figure class="media-left">
+      <p class="image is-64x64">
+        <img src="https://bulma.io/images/placeholders/128x128.png">
+      </p>
+    </figure>
+    <div class="media-content">
+      <div class="field">
+        <div class="control">
+          <input class="input text-capitalize" type="text" [(ngModel)] = "nameUser" (ngModelChange) = "nameUser = $event" placeholder="Type your name">
         </div>
       </div>
-      <div class="comment-btns mt-2">
-        <div class="row">
-          <div class="col-6 ">
-            <div class="toRight">
-              <button class="btn btn-success send btn-lg text-light font-weight-bold" (click) = "aggregateMe()">Submit</button>
-            </div>
+      <div class="field">
+        <p class="control">
+          <textarea class="textarea"  [(ngModel)] = "textUser" (ngModelChange) = "textUser = $event" placeholder="Add a comment..."></textarea>
+        </p>
+      </div>
+      <nav class="level">
+        <div class="level-left">
+          <div class="level-item">
+            <a class="button is-info" (click) = "aggregateMe()">Submit</a>
           </div>
         </div>
-      </div>
+        <div class="level-right d-none">
+          <div class="level-item">
+            <label class="checkbox">
+              <input type="checkbox"> Press enter to submit
+            </label>
+          </div>
+        </div>
+      </nav>
     </div>
-  </form>
-  <!--End form-->
+  </article>
+  <!--End form comment-->
 </div>
+<br>
