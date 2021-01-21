@@ -22,16 +22,20 @@
         </figure>
       </div>
       <div class="media-content">
-        <p class="subtitle is-6 text-capitalize">best player</p>
+        <p class="subtitle is-6 text-capitalize has-text-weight-medium">best player</p>
         <p class="title is-4">{{ team.bestPlayers[0] }}</p>
 
       </div>
     </div>
 
     <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-      <a href="#">#css</a> <a href="#">#responsive</a>
+      <ul>
+        <li *ngFor= "let player of team.bestPlayers" class="has-text-weight-medium">
+          <!-- {{team.bestPlayers}} -->
+          {{player}}
+        </li>
+      </ul>
+
       <br>
       <time >{{ fecha }}</time>
     </div>

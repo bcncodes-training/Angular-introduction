@@ -24,11 +24,7 @@ export class BodyComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    console.log(this.dataArr);
-    console.log(this.dataArr[1]);
-    console.log(this.dataArr[2]);
-    console.log(this.dataArr[0]);
-    console.log(this.dataArr[0].bestPlayers[0]);
+
   }
 
 }
