@@ -1,0 +1,46 @@
+<br>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+  <!--row-->
+  <div class="row" >
+    <!--col-1-->
+    <div class="col-4" *ngFor="let team of dataArr; let num = index">
+<div class="card">
+  <div class="card-image is-128x128">
+    <figure class="image">
+      <img src="{{team.urlImg}}" alt="Placeholder image" class="logoImg mt-3">
+    </figure>
+  </div>
+  <div class="media-content mt-2 d-flex flex-row justify-content-center">
+    <p class="title is-4">NBA Champions {{ team.year }}</p>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-48x48">
+          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="media-content">
+        <p class="subtitle is-6 text-capitalize has-text-weight-medium">best player</p>
+        <p class="title is-4">{{ team.bestPlayers[0] }}</p>
+
+      </div>
+    </div>
+
+    <div class="content">
+      <ul>
+        <li *ngFor= "let player of team.bestPlayers" class="has-text-weight-medium">
+          <!-- {{team.bestPlayers}} -->
+          {{player}}
+        </li>
+      </ul>
+
+      <br>
+      <time >{{ fecha }}</time>
+    </div>
+  </div>
+</div>
+    </div><!--end col-1-->
+  </div><!--end row-->
+</div><!--end container--->

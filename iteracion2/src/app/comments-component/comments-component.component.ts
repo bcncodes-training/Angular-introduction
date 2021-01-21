@@ -1,92 +1,56 @@
 import { Component, OnInit } from '@angular/core';
-import {comments} from '../shared/data/comments.data';
-
-
+import {allComments} from '../shared/comments.data';
 @Component({
-  selector: 'app-comments-component',
+  selector: 'pr-comments-component',
   templateUrl: './comments-component.component.html',
-  styleUrls: ['./comments-component.component.scss']
+  styleUrls: ['./comments-component.component.css']
 })
 export class CommentsComponentComponent implements OnInit {
-  titulo = 'Comments:';
-
-  public comments:Array<object>;
+	// you help me
+  title      = 'Ejercicio de MEAN-STACK @cifo "La Violeta"';
+  diaHora = () => new Date().toLocaleString().replace(',','');
+  public allComments: any [] = [];
 
   constructor() {
-    this.comments = comments;
+    this.allComments = allComments;
   }
+  // comment
+  nameUser: string = "";
+  textUser: string = "";
+  timeUser: string = "";
 
-/*   saveComment(event:any, formulario:any):void{
-    event.preventDefault();
-    this.comments.push({
-      name: formulario[0].value,
-      date: new Date(),
-      time: new Date(),
-      comentario: formulario[1].value
-        })
+  // avatars
+  avatarsUser: string = 'https://bootdey.com/img/Content/avatar/avatar2.png';
 
-      formulario.reset();
-  } */
+  // comments arr
+ /*  allComments: any [] = [
+    {nameUser: 'john rambo', timeUser: this.diaHora(), textUser: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales ex quam. Aenean suscipit ornare magna non fermentum. Cras consequat viverra dignissim. Praesent lacinia felis vitae'},
+    {nameUser: 'john wick', timeUser: this.diaHora(), textUser: ' nunc feugiat aliquam. Sed dictum enim eu augue vehicula, a volutpat neque vehicula.'},
+    {nameUser: 'john wayne', timeUser: this.diaHora(), textUser: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales ex quam. Aenean suscipit ornare magna non fermentum. Cras consequat viverra dignissim.'},
+  ]; */
+  // length comments
+  longArr: number = this.allComments.length;
+  // add comment
+  aggregateMe() {
+// aux comments to push it all and no one by one
+let commentAux = {
+	nameUser: this.nameUser,
+	timeUser: this.diaHora(),
+	textUser: this.textUser
+}
+this.allComments.push(commentAux);
 
-  saveComment(event:any, formulario:any):void{
-    event.preventDefault();
+  };
+  // delete comment
+  deleteMe(num: number): void{
 
-    let comentario = {
-      id:4,
-      name: formulario[0].value,
-      date: new Date(),
-      time: new Date(),
-      comentario: formulario[1].value
-        };
+    this.allComments.splice(num, 1);
+  };
 
-    this.comments = [{
-      id: 1,
-      name: 'Katy',
-      date: '25/04/2019 15:26',
-      comentario: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-    },{
-      id: 2,
-      name: 'Salomon',
-      date: '25/04/2019 17:26',
-      comentario: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum lacus ac felis hendrerit, sed molestie mi laoreet.'
-    },{
-      id: 3,
-      name: 'Bondary',
-      date: '26/04/2019 16:26',
-      comentario: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-    }, comentario];
 
-    formulario.reset();
 
-  }
-
-  trackByCommentId(comment: any):string{
-    return comment.id;
-  }
-
-  ngOnInit() {
+  ngOnInit(): void {
+    console.log(this.diaHora());
   }
 
 }
-
-
-/*@Component({
-  selector: 'app-little-tour',
-  template: `
-    <input #newHero
-      (keyup.enter)="addHero(newHero.value)"
-      (blur)="addHero(newHero.value); newHero.value='' ">
-
-    <button (click)="addHero(newHero.value)">Add</button>
-
-    <ul><li *ngFor="let hero of heroes">{{hero}}</li></ul>
-  `
-})
-export class LittleTourComponent {
-  heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
-  addHero(newHero: string) {
-    if (newHero) {
-      this.heroes.push(newHero);
-    }
-  }
-}*/

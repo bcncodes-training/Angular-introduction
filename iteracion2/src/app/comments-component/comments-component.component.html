@@ -1,32 +1,100 @@
-<div class="container mb-5">
-  <div class="row justify-content-md-center">
-    <div class="col-md-10">
-      <h2>{{ titulo }}</h2>
-      <hr class="bg-info mb-5">
-
-    <div *ngFor="let comment of comments, let i = index; trackBy: trackByCommentId" >
-      <h4 class="d-inline">{{ comment.name }}</h4>
-      <span class="d-inline"> {{ comment.date }}</span>
-      <p class="mb-5">{{ comment.comentario }}</p>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<br>
+<div class="container">
+  <!--how many mesages-->
+<!-- Titulo noticias-->
+  <div class="card">
+    <div class="card-content">
+      <p class="title">
+        “{{ title }}”
+      </p>
+      <p class="subtitle">
+        Robert Garcia
+      </p>
     </div>
+    <footer class="card-footer">
+      <p class="card-footer-item">
+        <span>
+          {{ longArr }}
+        </span>
+      </p>
+      <p class="card-footer-item">
+        <span>
+          Share on <a href="#">Facebook</a>
+        </span>
+      </p>
+    </footer>
+  </div>
+<br>
+  <!--comentarios-->
+  <article class="media" *ngFor="let comment of allComments; let numText = index">
+    <figure class="media-left">
+      <p class="image is-64x64">
+        <img src="{{avatarsUser}}">
+      </p>
+    </figure>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong class="text-capitalize">{{comment.nameUser}}</strong> <small class="ml-5">{{ comment.timeUser }}</small>
+          <br>
+          {{ comment.textUser }}
+        </p>
+      </div>
+      <nav class="level is-mobile">
+        <div class="level-left">
+          <a class="level-item">
+            <span class="icon is-small"><i class="fa fa-reply"></i></span>
+          </a>
+          <a class="level-item">
+            <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+          </a>
+          <a class="level-item">
+            <span class="icon is-small"><i class="fa fa-heart"></i></span>
+          </a>
+        </div>
+      </nav>
+    </div>
+    <div class="media-right">
+      <button class="delete" (click) = "deleteMe(numText)"></button>
+    </div>
+  </article>
 
-    <div class="row justify-content-md-center">
-        <div class="col-md-7">
-          <form class="bg-light p-5" #formulario>
-            <h3>Add your comment</h3>
-            <hr class="bg-info">
-            <div class="form-group">
-              <label for="">Name</label>
-              <input type="text" class="form-control" #name>
-            </div>
-            <div class="form-group">
-              <label for="exampleFormControlTextarea1">Description:</label>
-              <textarea class="form-control" #exampleFormControlTextarea1 rows="5"></textarea>
-            </div>
-            <button type="submit" class="btn btn-info" (click)='saveComment($event, formulario)'>Submit</button>
-          </form>
+  <br>
+  <!--Submit comment-->
+  <article class="media">
+    <figure class="media-left">
+      <p class="image is-64x64">
+        <img src="{{avatarsUser}}">
+      </p>
+    </figure>
+    <div class="media-content">
+      <div class="field">
+        <div class="control">
+          <input class="input text-capitalize" type="text" [(ngModel)] = "nameUser" (ngModelChange) = "nameUser = $event" placeholder="Type your name">
         </div>
       </div>
+      <div class="field">
+        <p class="control">
+          <textarea class="textarea"  [(ngModel)] = "textUser" (ngModelChange) = "textUser = $event" placeholder="Add a comment..."></textarea>
+        </p>
+      </div>
+      <nav class="level">
+        <div class="level-left">
+          <div class="level-item">
+            <a class="button is-info" (click) = "aggregateMe()">Submit</a>
+          </div>
+        </div>
+        <div class="level-right d-none">
+          <div class="level-item">
+            <label class="checkbox">
+              <input type="checkbox"> Press enter to submit
+            </label>
+          </div>
+        </div>
+      </nav>
     </div>
-  </div>
+  </article>
+  <!--End form comment-->
 </div>
+<br>

@@ -1,0 +1,8 @@
+.container{
+  box-sizing: border-box;
+}
+.logoImg{
+  margin: 0 auto;
+  width:auto;
+  height: 250px;
+}

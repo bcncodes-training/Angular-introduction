@@ -11,25 +11,6 @@ Con este ejercicio aprenderás a:
 - Construir una aplicación Angular con dos componentes anidados.
 - Construir una aplicación Angular usando iteradores anidados.
 
-## Requisitos
-
-- [Fork este repositorio](https://guides.github.com/activities/forking/).
-- Clona tu repositorio en tu directorio local `~/code/labs`.
-
-## Entrega
-
-Después de completar el ejercicio ejecuta los siguientes comandos desde tu consola de Git local:
-
-```bash
-$ git add .
-$ git commit -m "done"
-$ git push origin master
-```
-
-Desde **tu repositorio github** crea un *pull request* de tu rama master a la rama master del repositorio original.
-
-En el campo nombre del mensaje añade tu nombre, o el de ambos compañeros.
-
 ## Introducción
 
 En este ejercicio trabajarás con Angular por primera vez. El objetivo es trabajar en tres proyectos para practicar los conceptos aprendidos.
@@ -78,3 +59,5 @@ Toda la información se encuentra en [NBA Champions](https://en.wikipedia.org/wi
 **Nota** 
 Se requiere iterar sobre dos colecciones diferentes para mostrar toda la información: `Championships` y `best-players` de cada equipo.
 <!-- ::: -->
+
+<!--https://bbbootstrap.com/snippets/bootstrap-comment-section-form-ratings-98792632-->
