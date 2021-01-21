@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Moment } from "moment";
-const moment = require('moment');
+import * as moment from 'moment';
+
 
 @Component({
   selector: 'pr-root',
@@ -9,10 +9,17 @@ const moment = require('moment');
 })
 export class AppComponent implements OnInit{
 
-  ngOnInit(): void {
-    let date = moment().format("D/ MM/ YY");
-    let hour = moment().format("hh:m:ss");
-   console.log(`${date} ${hour}`);
+  fecha: string = "";
+  constructor(){
+    moment.locale('es');
+    this.fecha = moment().format('LLL');
   }
-  title = 'iteracion3';
+  ngOnInit(): void {
+
+    let date: string = moment().format("D/ MM/ YY");
+    let hour: string = moment().format("hh:m:ss");
+   console.log(`${date} ${hour}`);
+   console.log(`${this.fecha}`);
+  }
+
 }
